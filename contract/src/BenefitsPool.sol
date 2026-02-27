@@ -487,4 +487,11 @@ contract BenefitsPool is Ownable, ReentrancyGuard, Pausable {
     function getOwnerAddress() external view returns (address) {
         return owner();
     }
+
+    /**
+     * @dev Check if pool is paused
+     */
+    function isPaused() external view returns (bool) {
+        return paused();
+    }
 }
