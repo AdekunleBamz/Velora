@@ -480,4 +480,11 @@ contract BenefitsPool is Ownable, ReentrancyGuard, Pausable {
     function getVersion() external pure returns (string memory) {
         return "1.0.0";
     }
+
+    /**
+     * @dev Get contract owner address
+     */
+    function getOwnerAddress() external view returns (address) {
+        return owner();
+    }
 }
